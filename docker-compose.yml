@@ -1,0 +1,22 @@
+version: '3'
+services:
+  worker:
+    build: .
+    command: php /app/bin/cli.php worker -vvv
+    links:
+    - redis
+    depends_on:
+      - redis
+    environment:
+      REDIS_HOST: redis
+  test_script:
+    build: .
+    command: php /app/bin/cli.php test:script
+    links:
+    - redis
+    depends_on:
+      - redis
+    environment:
+      REDIS_HOST: redis
+  redis:
+    image: redis

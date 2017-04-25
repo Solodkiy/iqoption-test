@@ -1,0 +1,20 @@
+{
+  "require": {
+    "php": "^7.1",
+    "moneyphp/money": "~3.0.4",
+    "symfony/console": "^3.2",
+    "psr/log": "^1.0.1",
+    "predis/predis": "~1.1",
+    "ramsey/uuid": "^3.6",
+    "webmozart/assert": "^1.2",
+    "solodkiy/memorize": "^0.1.0"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^3.2",
+    "phpunit/phpunit": "~6.1"
+  },
+  "autoload": {
+    "psr-4": {"IqOptionTest\\": "src/"},
+    "files": ["src/functions.php"]
+  }
+}
